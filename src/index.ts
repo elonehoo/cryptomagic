@@ -1,5 +1,5 @@
 import { Buffer } from 'node:buffer'
-import { createCipheriv, createDecipheriv, pbkdf2Sync,randomBytes } from 'node:crypto'
+import { createCipheriv, createDecipheriv, pbkdf2Sync, randomBytes } from 'node:crypto'
 import { parseJsonPayload, parseStringPayload } from './parser'
 
 const algorithm = 'aes-256-gcm'
