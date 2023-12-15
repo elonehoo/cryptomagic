@@ -1,32 +1,28 @@
-# starter-ts
+# cryptomagic
 
-[![NPM version](https://img.shields.io/npm/v/@elonehoo/starter-ts?color=a1b858&label=)](https://www.npmjs.com/package/@elonehoo/starter-ts)
+[![NPM version](https://img.shields.io/npm/v/cryptomagic?color=a1b858&label=)](https://www.npmjs.com/package/cryptomagic)
 
-Starter template for TypeScript library.
-
-## Try it now!
-
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/elonehoo/starter-ts/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
+## Install
 
 ```bash
-sudo npx degit elonehoo/starter-ts my-ts-app
-cd my-ts-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+npm install cryptomagic
 ```
 
-## Checklist
+## Usage
 
-When you use this template, try follow the checklist to update your info properly
+```js
+import JsonEncryptDecrypt from 'cryptomagic'
+const aes = new JsonEncryptDecrypt('pass')
 
-- [ ] Change the author name in `LICENSE`
-- [ ] Change the package name in `package.json` and package info
-- [ ] Remove the `.github` folder which contains the funding info
-- [ ] Clean up the README
+// Encrypt an json object
+const encryptMessage = aes.encrypt({ password: '67256558250eda49' })
 
-And, enjoy :)
+// Decrypt an encrypted message
+const decryptMessage = aes.decrypt(encryptMessage)
+
+console.log('encryptMessage:', encryptMessage)
+// encryptMessage: 8vp5dLgHjqaeU0/+xns2dP0lt+n4kCuEpTL8pRxC9CPAX+EflctafaiFqUZqgKOLD+Y2/hZkCjwjctMfELWkzzGS18BiHOGiF+w0RU/JZV6SQNRb5V6ziOjySUWkE2MCfLQuEPMd/9HkSYjftmXoZIVJpAxScvv5YbKDUXDqGCOagg0aHXJbfP8DOTsvjS3K2bYXY93MCKoPV+9ZhyQe7lzSCpSm3YJXm6/875gW5eE=
+
+console.log('decryptMessage:', decryptMessage)
+// decryptMessage: { password: '67256558250eda49' }
+```
