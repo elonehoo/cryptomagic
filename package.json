@@ -1,7 +1,7 @@
 {
   "name": "@elonehoo/cryptomagic",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A magic library that allows fast json encryption",
   "author": "Elone Hoo <elonehoo@gmail.com>",
   "license": "MIT",
