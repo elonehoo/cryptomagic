@@ -1,0 +1,36 @@
+name: autofix.ci
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        run: corepack enable
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install
+
+      - name: Lint and fix
+        run: pnpm run lint:fix
+
+      - uses: autofix-ci/action@d3e591514b99d0fca6779455ff8338516663f7cc
