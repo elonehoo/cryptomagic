@@ -33,6 +33,7 @@
   ],
   "scripts": {
     "dev": "unbuild --stub",
+    "play": "pnpm -C playground run dev",
     "build": "unbuild",
     "stale": "stale-del -u",
     "test": "vitest",
@@ -54,5 +55,9 @@
     "unbuild": "^2.0.0",
     "vite": "^5.0.9",
     "vitest": "^1.0.4"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0"
   }
 }

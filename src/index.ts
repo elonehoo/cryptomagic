@@ -1,5 +1,6 @@
-import { Buffer } from 'node:buffer'
-import { createCipheriv, createDecipheriv, pbkdf2Sync, randomBytes } from 'node:crypto'
+// eslint-disable-next-line
+import { Buffer } from 'buffer'
+import { createCipheriv, createDecipheriv, pbkdf2Sync, randomBytes } from 'crypto-browserify'
 import { parseJsonPayload, parseStringPayload } from './parser'
 
 const algorithm = 'aes-256-gcm'

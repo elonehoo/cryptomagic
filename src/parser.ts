@@ -1,4 +1,5 @@
-import { Buffer } from 'node:buffer'
+// eslint-disable-next-line
+import { Buffer } from 'buffer'
 
 function parseJsonPayload(payload: any) {
   const parsedString = JSON.stringify(payload)
