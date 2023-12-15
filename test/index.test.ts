@@ -16,7 +16,6 @@ describe('should', () => {
   it('exported2', () => {
     const json = [{ a: 1 }, { b: 2 }, { c: 3 }, { d: 4 }]
     const encryptedMessage = _aes.encrypt(json)
-    console.log(encryptedMessage)
     expect(_aes.decrypt(encryptedMessage)).toEqual(json)
   })
   it('exported3', () => {
@@ -27,7 +26,6 @@ describe('should', () => {
       email: 'elonehoo@gmail.com',
     }
     const encryptedMessage = _aes.encrypt(json)
-    console.log(encryptedMessage)
     expect(_aes.decrypt(encryptedMessage)).toEqual(json)
   })
 })
