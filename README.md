@@ -5,13 +5,13 @@
 ## Install
 
 ```bash
-npm install cryptomagic
+npm install @elonehoo/cryptomagic
 ```
 
 ## Usage
 
 ```js
-import JsonEncryptDecrypt from 'cryptomagic'
+import JsonEncryptDecrypt from '@elonehoo/cryptomagic'
 const aes = new JsonEncryptDecrypt('pass')
 
 // Encrypt an json object
