@@ -1,6 +1,6 @@
 # cryptomagic
 
-[![NPM version](https://img.shields.io/npm/v/cryptomagic?color=a1b858&label=)](https://www.npmjs.com/package/cryptomagic)
+[![NPM version](https://img.shields.io/npm/v/@elonehoo/cryptomagic?color=a1b858&label=)](https://www.npmjs.com/package/@elonehoo/cryptomagic)
 
 ## Install
 
